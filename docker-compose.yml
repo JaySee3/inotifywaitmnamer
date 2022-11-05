@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  inotifywaitmnamer:
+    image: jaysee3/inotifywaitmnamer
+    container_name: MNamer
+    volumes:
+      - /srv/storage/Media/Downloads/Complete:/mnt/Watch
+      - /srv/storage/Media/Movies:/mnt/Movies
+      - /srv/storage/Media/TV:/mnt/TV
+    restart: unless-stopped
